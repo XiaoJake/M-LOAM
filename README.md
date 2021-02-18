@@ -6,7 +6,7 @@ M-LOAM is a robust system for multi-LiDAR extrinsic calibration, real-time odome
 [Jianhao Jiao](http://gogojjh.github.io),
 [Haoyang Ye](https://github.com/hyye),
 [Yilong Zhu](https://scholar.google.com/citations?user=x8n6v2oAAAAJ&hl=zh-CN),
-[Linxin Jiang](xxx),
+[Linxin Jiang](https://github.com/jianglingxin),
 [Ming Liu](https://scholar.google.com/citations?user=CdV5LfQAAAAJ&hl=zh-CN)
 from [RAM-LAB](https://www.ram-lab.com), [HKUST](http://www.ust.hk)
 
@@ -14,8 +14,10 @@ from [RAM-LAB](https://www.ram-lab.com), [HKUST](http://www.ust.hk)
 
 **Videos:**
 
-<a href="https://www.youtube.com/watch?v=qFA_bVkh89Y" target="_blank"><img src="https://img.youtube.com/vi/qFA_bVkh89Y/0.jpg"
-alt="mloam" width="360" height="270" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=VqaIb3GaCmE" target="_blank"><img src="https://img.youtube.com/vi/VqaIb3GaCmE/0.jpg"
+alt="mloam" width="280" height="200" border="10" /></a>
+
+(Video link in for mainland China friends: <a href="https://www.bilibili.com/video/BV1ur4y1K7FR/">Video</a>)
 
 **Related Papers**
 * **Robust Odometry and Mapping for Multi-LiDAR Systems with Online Extrinsic Calibration**, Jianhao Jiao, Haoyang Ye, Yilong Zhu, Ming Liu, under review. [pdf](https://arxiv.org/pdf/2010.14294.pdf)
@@ -31,26 +33,22 @@ alt="mloam" width="360" height="270" border="10" /></a>
 Ubuntu 64-bit 16.04 or 18.04.
 ROS Kinetic or Melodic. [ROS Installation](http://wiki.ros.org/ROS/Installation)
 
-1.2. **Ceres Solver**
+1.2. **Ceres Solver && Eigen3 && GLOG**
 
-Follow [Ceres Installation](http://ceres-solver.org/installation.html), remember to **make install**.
-<!-- (Our testing environment: Ubuntu 18.04, ROS Melodic, PCL 1.8, Eigen 3.3.3)  -->
+```
+ ./setup/install_eigen3_ceres.sh
+```
 
-1.3. **PCL**
-
-Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
-
-1.4. **OpenMP**
+1.3. **OpenMP**
 ```
   sudo apt install libomp-dev
 ```
 
-1.5. **Eigen3**
+<!-- 1.4 **Libpointmarcher**
 ```
-  sudo apt install libeigen-dev
-```
-
-1.6. **GLOG, GFLAGS, GTEST**
+ ./setup/install_libnabo.sh
+ ./setup/install_libpointmatcher.sh
+``` -->
 
 <!-- ----------------------------------------------------------- -->
 ### 2. Build M-LOAM on ROS
